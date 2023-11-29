@@ -1,0 +1,94 @@
+/* Add this to your existing CSS or create a new stylesheet */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.display {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: grey;
+    border-radius: 10px; /* Set the border radius to your desired value */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 300px;
+    background-color: grey;
+    border-radius: 10px; /* Set the border radius to your desired value */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.719); /* Add box shadow with your desired parameters */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+/* Add styles for the buttons-container */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#btnSort {
+    padding: 15px; /* Increase the padding to make the button bigger */
+    width: 150px; /* Increase the width of the Sort button */
+    background-color: #3498db; /* Change the color to blue for the Sort button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Adjust the margin to move the button more to the left */
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+#btnSort:hover {
+    background-color: #2980b9; /* Change the color on hover */
+}
+
+#btnAdd {
+    padding: 15px; /* Increase the padding to make the button bigger */
+    width: 150px; /* Increase the width of the Add button */
+    background-color: #4CAF50; /* Change the color to green for the Add button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+#btnAdd:hover {
+    background-color: #45a049; /* Change the color on hover */
+}
+
+input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 480px) {
+    .buttons-container {
+        flex-direction: row; /* Keep buttons in a row on smaller screens */
+        align-items: center; /* Center items horizontally */
+        justify-content: space-between; /* Add space between buttons and input */
+        padding: 40px;
+    }
+
+    #btnSort,
+    #btnAdd {
+        width: 150px; /* Set a fixed width for buttons to keep them the same size */
+        margin-bottom: 0; /* Remove margin between buttons on smaller screens */
+    }
+
+    input {
+        margin-top: 10px; /* Add space between input and buttons on smaller screens */
+        width: calc(100% - 20px); /* Calculate input width to fill the available space */
+    }
+}
