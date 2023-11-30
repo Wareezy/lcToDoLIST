@@ -3,30 +3,47 @@ let inputField=document.querySelector('[data-input]')
 let btnAdd=document.querySelector('[data-add]')
 let display=document.querySelector('[data-display]')
 let date=new Date();
-function todoList(id,name,createdDate,completed){
-    this.id=id;
-    this.name=name;
-    this.createdDate=createdDate;
-    this.completed=completed;
+let inputValues=[
+    { 
+    id:1,
+    name:inputField.value,
+createdDate:date,
+completed:false
 }
+];
 
-let array=new todoList()
+let userstorage=JSON.stringify(inputValues);
 
-localStorage.setItem('items',JSON.stringify(array))
-array=JSON.parse(localStorage.getItem('items'))
+localStorage.setItem("TodoKey", (userstorage))
 
-let a=array.map((item,index)=>{
-    console.log(item);
-    console.log(index);
-   return 
+let parsedData=JSON.parse(localStorage.getItem("TodoKey"));
 
-   display.innerHTML=
-   
+console.log(parsedData);
 
+let newFilterdArr=[];
 
+function addToDo(newValue){
+    let newitem=newFilterdArr.push(parsedData);
+for(let x of inputValues)
+{
+    console.log(x)
+    x.name=newValue;
+    x.createdDate.getDay();
+    x.completed=false;
+}
+//Returns undef for now
+inputValues.map(i =>{
+    console.log(i);
+    display.innerHTML=`
+    <div class="tab">
+    <input type="checkbox"/>
+    <h4 class="li-name">${i.name}</h4>
+    <button class="btn-remove">x</button>
+    </div>
+       `
+});
 
+console.log(newitem)
 
-
-})
-
-btnAdd.addEventListener('click', todoList)
+}
+btnAdd.addEventListener('click',()=>addToDo(inputField.value))
