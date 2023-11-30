@@ -21,6 +21,7 @@ body {
     padding: 20px;
     margin-top: 300px;
     background-color: grey;
+    
     border-radius: 10px; /* Set the border radius to your desired value */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.719); /* Add box shadow with your desired parameters */
 }
@@ -75,20 +76,21 @@ input {
 /* Media query for responsiveness */
 @media only screen and (max-width: 480px) {
     .buttons-container {
-        flex-direction: row; /* Keep buttons in a row on smaller screens */
-        align-items: center; /* Center items horizontally */
-        justify-content: space-between; /* Add space between buttons and input */
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
         padding: 40px;
     }
 
     #btnSort,
     #btnAdd {
-        width: 150px; /* Set a fixed width for buttons to keep them the same size */
-        margin-bottom: 0; /* Remove margin between buttons on smaller screens */
+        width: 150px; 
+        margin-bottom: 0; 
     }
 
     input {
-        margin-top: 10px; /* Add space between input and buttons on smaller screens */
-        width: calc(100% - 20px); /* Calculate input width to fill the available space */
+        margin-top: 10px; 
+        width: calc(100% - 20px); 
     }
 }
+
