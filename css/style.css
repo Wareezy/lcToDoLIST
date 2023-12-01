@@ -1,96 +1,148 @@
 /* Add this to your existing CSS or create a new stylesheet */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-.display {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 30px;
-    background-color: grey;
-    border-radius: 10px; /* Set the border radius to your desired value */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 300px;
-    background-color: grey;
+ font-family: 'Arial', sans-serif;
+ margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+    }
+    .display {
+max-width: 800px;
+ margin: 0 auto;
+padding: 20px;
+margin-top: 30px;
+ background-color: grey;
+ border-radius: 10px; /* Set the border radius to your desired value */
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
+    }
     
-    border-radius: 10px; /* Set the border radius to your desired value */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.719); /* Add box shadow with your desired parameters */
-}
-
+    .container {
+ max-width: 800px;
+ margin: 0 auto;
+padding: 20px;
+ margin-top: 300px;
+ background-color: grey;
+border-radius: 10px; /* Set the border radius to your desired value */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.719); /* Add box shadow with your desired parameters */
+    }
+    
 h1 {
-    text-align: center;
-    color: white;
-}
-
-/* Add styles for the buttons-container */
+ text-align: center;
+color: white;
+    }
+    
+    /* Add styles for the buttons-container */
 .buttons-container {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+    }
+    
+    #btnSort {
+/* Increase the padding to make the button bigger */
+padding: 15px; 
+
+/* Increase the width of the Sort button */
+width: 150px; 
+
+/* Change the color to blue for the Sort button */
+background-color: #3498db; 
+color: white;
+border: none;
+ cursor: pointer;
+ 
+ /* Adjust the margin to move the button more to the left */
+ margin-right: 10px; 
+ 
+ /* Add transition for smooth color change */
+ transition: background-color 0.3s; 
+    }
+    
+#btnSort:hover { 
+    
+    /* Change the color on hover */
+background-color: #2980b9;
+    }
+    
+    #btnAdd { 
+        
+/* Increase the padding to make the button bigger */
+ padding: 15px;
+ 
+ /* Increase the width of the Add button */
+ width: 150px; 
+
+  /* Change the color to green for the Add button */
+ background-color: #4CAF50;
+color: white;
+   border: none;
+ cursor: pointer;
+ 
+ /* Add transition for smooth color change */
+ transition: background-color 0.3s; 
+    }
+    
+    #btnAdd:hover {
+        
+        /* Change the color on hover */
+ background-color: #45a049;
+    }
+    
+    input {
+ flex-grow: 1;
+ padding: 10px;
+ margin-right: 10px;
+    }
+
+
+  /* Style for the todo container */
+.tab {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: space-between; 
+    
+    /* Align items vertically in the center */
+    align-items: center;
 }
 
-#btnSort {
-    padding: 15px; /* Increase the padding to make the button bigger */
-    width: 150px; /* Increase the width of the Sort button */
-    background-color: #3498db; /* Change the color to blue for the Sort button */
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px; /* Adjust the margin to move the button more to the left */
-    transition: background-color 0.3s; /* Add transition for smooth color change */
-}
-
-#btnSort:hover {
-    background-color: #2980b9; /* Change the color on hover */
-}
-
-#btnAdd {
-    padding: 15px; /* Increase the padding to make the button bigger */
-    width: 150px; /* Increase the width of the Add button */
-    background-color: #4CAF50; /* Change the color to green for the Add button */
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Add transition for smooth color change */
-}
-
-#btnAdd:hover {
-    background-color: #45a049; /* Change the color on hover */
-}
-
-input {
+.li-name {
+    margin: 0;
     flex-grow: 1;
-    padding: 10px;
-    margin-right: 10px;
+    word-wrap: break-word;
+    color: white;
+    text-align: center; 
 }
 
+.btn-remove {
+    background-color: #ff6961;
+    color: #fff;
+    border: none;
+    padding: 9px;
+    margin-right: 120px;
+    cursor: pointer;
+    margin-top: 10px; 
+    
+    /* Add margin-bottom for separation */
+    margin-bottom: 10px;
+}
+
+    
+    
 /* Media query for responsiveness */
 @media only screen and (max-width: 480px) {
-    .buttons-container {
-        flex-direction: row; 
-        align-items: center; 
-        justify-content: space-between; 
-        padding: 40px;
+ .buttons-container {
+ flex-direction: row; 
+  align-items: center; 
+ justify-content: space-between; 
+ padding: 40px;
+  }
+    
+ #btnSort,
+#btnAdd {
+width: 150px; 
+ margin-bottom: 0; 
+ }
+    
+  input {
+margin-top: 10px; 
+ width: calc(100% - 20px); 
+ }
     }
-
-    #btnSort,
-    #btnAdd {
-        width: 150px; 
-        margin-bottom: 0; 
-    }
-
-    input {
-        margin-top: 10px; 
-        width: calc(100% - 20px); 
-    }
-}
-
